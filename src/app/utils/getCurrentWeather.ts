@@ -54,6 +54,7 @@ export const getCurrentWeather = async (location: string):Promise<Response> => {
 
   if (!res.ok) {
     throw new Error('날씨 정보를 가져올 수 없습니다!');
+    console.log('http://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_API_KEY}&q=${location}&aqi=no');
   }
 
   return res.json();
