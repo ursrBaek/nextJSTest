@@ -50,10 +50,10 @@ export interface Condition {
 
 
 export const getCurrentWeather = async (location: string):Promise<Response> => {
-  const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_API_KEY}&q=${location}&aqi=no`, {next: {tags: ['weather']}});
+  const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=b76ed647567a45c991774225232010&q=${location}&aqi=no`, {next: {tags: ['weather']}});
 
   if (!res.ok) {
-    console.log(`http://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_API_KEY}&q=${location}&aqi=no`);
+    console.log(`http://api.weatherapi.com/v1/current.json?key=b76ed647567a45c991774225232010&q=${location}&aqi=no`);
     throw new Error('날씨 정보를 가져올 수 없습니다!');
   }
 
